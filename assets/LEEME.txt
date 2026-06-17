@@ -1,0 +1,25 @@
+Carpeta de imágenes del CV.
+
+IMÁGENES QUE TENÉS QUE AGREGAR
+------------------------------
+Colocá acá tus imágenes con estos nombres (o cambiá los src en index.html):
+
+  - foto-perfil.jpg          -> tu foto de perfil (cuadrada, ej. 400x400px)
+  - proyecto-pitwall.png     -> captura de PIT WALL (F1)
+  - proyecto-pokedex.png     -> captura de la Pokédex
+  - proyecto-asistencia.png  -> captura del Sistema de Asistencia
+
+Mientras estos archivos no existan, el sitio muestra placeholders
+automáticos, así que podés subir todo a GitHub Pages sin problema.
+
+LOGOS DE TECNOLOGÍAS (ya incluidos)
+-----------------------------------
+Se usan en la sección "Habilidades". Ojo: GitHub Pages distingue
+mayúsculas/minúsculas, así que no cambies el case de los nombres.
+
+  html.svg, css.svg, js.svg, mysql.svg, nodejs.svg, Java.svg,
+  Git.svg, github.svg, vscode.svg, autocad.svg,
+  C_Programming_Language.svg.png (logo de C),
+  png-capcut-logo.png (logo de CapCut)
+
+Podés borrar este archivo cuando quieras.

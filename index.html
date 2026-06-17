@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joaquín Barreira — CV</title>
+  <meta name="description" content="CV de Joaquín Barreira, estudiante del último año de la especialización en computación." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Script inline anti-flash: aplica el tema guardado ANTES de pintar la página.
+    Evita el destello blanco al cargar en modo oscuro.
+    El resto de la lógica (toggle tema, idioma, scroll activo) está en script.js
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<!--
+  ============================================================================
+  TRADUCCIÓN (ES / EN)
+  - El contenido por defecto está en español.
+  - Cada texto traducible tiene un atributo data-en con su versión en inglés.
+  - script.js guarda el español original y alterna con el botón de idioma.
+  ============================================================================
+-->
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <!-- Iniciales como logo, enlazan al inicio -->
+      <a href="#inicio" class="navbar__brand">JB</a>
+
+      <nav class="navbar__links" aria-label="Navegación principal">
+        <!-- Anclas: cada link lleva por scroll a su sección. -->
+        <!-- La clase "active" la maneja script.js según la sección visible. -->
+        <a href="#inicio" class="active" data-en="Home">Inicio</a>
+        <a href="#sobre-mi" data-en="About me">Sobre mí</a>
+        <a href="#habilidades" data-en="Skills">Habilidades</a>
+        <a href="#trayectoria" data-en="Background">Trayectoria</a>
+        <a href="#proyectos" data-en="Projects">Proyectos</a>
+        <a href="#contacto" data-en="Contact">Contacto</a>
+      </nav>
+
+      <!-- Acciones: cambiar idioma + cambiar tema (lógica en script.js) -->
+      <div class="navbar__actions">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma" title="Cambiar idioma">
+          <span class="lang-toggle__label">EN</span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO / INICIO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero__photo">
+        <!--
+          FOTO DE PERFIL:
+          Reemplazá el src de abajo por tu foto (ej: assets/foto-perfil.jpg).
+          Recomendado: imagen cuadrada (ej. 400x400px) para que se vea bien circular.
+        -->
+        <img src="assets/foto-perfil.jpg"
+             alt="Foto de perfil de Joaquín Barreira"
+             onerror="this.classList.add('hero__photo--placeholder'); this.removeAttribute('src');" />
+      </div>
+
+      <div class="hero__text">
+        <p class="hero__greeting" data-en="Hi! I'm">¡Hola! Soy</p>
+        <h1>Joaquín Barreira</h1>
+        <p class="hero__subtitle" data-en="Final-year student specializing in computer science">Estudiante del último año de la especialización en computación</p>
+
+        <!--
+          DATOS PERSONALES:
+          Reemplazá los textos de abajo por tu fecha de nacimiento y tu localidad.
+          Acordate de actualizar también el data-en (versión en inglés).
+        -->
+        <ul class="hero__meta">
+          <li>
+            <span class="hero__meta-icon" aria-hidden="true">📍</span>
+            <span data-en="Monte Castro, Buenos Aires (CABA)">Monte Castro, CABA</span>
+          </li>
+          <li>
+            <span class="hero__meta-icon" aria-hidden="true">🎂</span>
+            <span data-en="Born Aug 31, 2007">Nacido el 31/08/2007</span>
+          </li>
+        </ul>
+
+        <div class="hero__cta">
+          <a href="#proyectos" class="btn btn--primary" data-en="View projects">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--ghost" data-en="Contact">Contacto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section id="sobre-mi" class="section">
+      <h2 class="section__title" data-en="About me">Sobre mí</h2>
+      <p class="section__text"
+         data-en="Final-year student specializing in computer science, looking for my first professional experience. I'm an enthusiastic person with a strong ability to learn new things: every project is a chance to pick up new tools and improve. I'm driven by the idea that, starting from a single idea, you can build anything.">
+        Estudiante del último año de la especialización en computación, en busca de mi primera
+        experiencia profesional. Me defino como una persona entusiasta y con mucha facilidad para
+        aprender cosas nuevas: cada proyecto es una oportunidad para incorporar herramientas y
+        mejorar. Me motiva la idea de que, partiendo de una sola idea, se puede crear cualquier cosa.
+      </p>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section id="habilidades" class="section">
+      <h2 class="section__title" data-en="Skills">Habilidades</h2>
+
+      <h3 class="section__subtitle" data-en="Languages &amp; technologies">Lenguajes y tecnologías</h3>
+      <!-- Cada chip lleva su logo (carpeta assets/). En GitHub Pages el nombre
+           del archivo distingue mayúsculas/minúsculas: respetá el case exacto. -->
+      <ul class="chips">
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/html.svg" alt="" aria-hidden="true" /> HTML</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/css.svg" alt="" aria-hidden="true" /> CSS</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/js.svg" alt="" aria-hidden="true" /> JavaScript</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/mysql.svg" alt="" aria-hidden="true" /> MySQL</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/nodejs.svg" alt="" aria-hidden="true" /> Node.js</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/C_Programming_Language.svg.png" alt="" aria-hidden="true" /> C</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/Java.svg" alt="" aria-hidden="true" /> Java</li>
+      </ul>
+
+      <h3 class="section__subtitle" data-en="Tools">Herramientas</h3>
+      <ul class="chips">
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/Git.svg" alt="" aria-hidden="true" /> Git</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/github.svg" alt="" aria-hidden="true" /> GitHub</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/vscode.svg" alt="" aria-hidden="true" /> VS Code</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/png-capcut-logo.png" alt="" aria-hidden="true" /> CapCut</li>
+        <li class="chip chip--logo"><img class="chip__logo" src="assets/autocad.svg" alt="" aria-hidden="true" /> AutoCAD</li>
+      </ul>
+
+      <h3 class="section__subtitle" data-en="Soft skills">Habilidades blandas</h3>
+      <ul class="chips">
+        <li class="chip" data-en="Teamwork">Trabajo en equipo</li>
+        <li class="chip" data-en="Leadership">Liderazgo</li>
+        <li class="chip" data-en="Fast learner">Aprendizaje rápido</li>
+        <li class="chip" data-en="Adaptability">Adaptabilidad</li>
+        <li class="chip" data-en="Empathy">Empatía</li>
+        <li class="chip" data-en="Active listening">Escucha activa</li>
+      </ul>
+    </section>
+
+    <!-- ===================== TRAYECTORIA (educación, logros, idiomas, intereses) ===================== -->
+    <section id="trayectoria" class="section">
+      <h2 class="section__title" data-en="Background">Trayectoria</h2>
+
+      <h3 class="section__subtitle" data-en="Education">Educación</h3>
+      <div class="card-list">
+        <article class="info-card">
+          <h4 class="info-card__title">Escuela Técnica N°35 "Ingeniero E. Latzina"</h4>
+          <p class="info-card__meta" data-en="Specialization in Computer Science · Graduation: 2026">Especialización en Computación · Egreso: 2026</p>
+        </article>
+
+        <article class="info-card">
+          <h4 class="info-card__title" data-en="English — CECIE D.E. 18">Inglés — CECIE D.E. 18</h4>
+          <p class="info-card__meta" data-en="Studied through year 7 · Upper-intermediate level (B2 / First)">Cursado hasta 7° año · Nivel intermedio/alto (B2 / First)</p>
+        </article>
+      </div>
+
+      <h3 class="section__subtitle" data-en="Achievements">Logros</h3>
+      <div class="card-list">
+        <article class="info-card">
+          <h4 class="info-card__title" data-en="Provincial finalist — 2025 Robotics Cup">Finalista provincial — Copa Robótica 2025</h4>
+          <p class="info-card__meta" data-en="Oozma Kappa team">Equipo Oozma Kappa</p>
+        </article>
+      </div>
+
+      <h3 class="section__subtitle" data-en="Languages">Idiomas</h3>
+      <ul class="chips">
+        <li class="chip" data-en="Spanish — Native">Español — Nativo</li>
+        <li class="chip" data-en="English — Upper-intermediate">Inglés — Intermedio/alto</li>
+      </ul>
+
+      <h3 class="section__subtitle" data-en="Interests">Intereses</h3>
+      <ul class="chips">
+        <li class="chip" data-en="Football">Fútbol</li>
+        <li class="chip" data-en="Formula 1">Fórmula 1</li>
+        <li class="chip" data-en="Music">Música</li>
+      </ul>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section id="proyectos" class="section">
+      <h2 class="section__title" data-en="Projects">Proyectos</h2>
+      <p class="section__text" data-en="A selection of projects I've worked on. Each card links to its repository and demo.">
+        Una selección de proyectos en los que trabajé. Cada tarjeta enlaza a su repositorio y demo.
+      </p>
+
+      <div class="projects-grid">
+
+        <!--
+          ===========================================================
+          TARJETA DE PROYECTO (PLANTILLA / PLACEHOLDER)
+          -----------------------------------------------------------
+          Para agregar un proyecto real, copiá un bloque <article>
+          completo y reemplazá:
+            1. La imagen: src="assets/proyecto-xxx.png" (captura del proyecto)
+            2. La categoría (eyebrow) y el estado (status)
+            3. El título: <h3 class="project-card__title">
+            4. La descripción: <p class="project-card__desc">
+            5. Las tecnologías: cada <li class="chip"> dentro de <ul>
+            6. El año en project-card__date
+            7. Los links de "Demo" y "Repositorio" (href)
+          (Si traducís, recordá actualizar también los atributos data-en)
+          ===========================================================
+        -->
+
+        <!-- PROYECTO 1 — PIT WALL (estadísticas de F1) -->
+        <article class="project-card">
+          <div class="project-card__media">
+            <!-- Captura del proyecto (ver assets/LEEME.txt) -->
+            <img src="assets/proyecto-pitwall.png"
+                 alt="Captura de PIT WALL, app de estadísticas de F1"
+                 onerror="this.classList.add('project-card__img--placeholder'); this.removeAttribute('src');" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-row">
+              <span class="project-card__eyebrow" data-en="Full Stack">Full Stack</span>
+              <span class="project-card__status" data-en="Demo available">Demo disponible</span>
+            </div>
+            <h3 class="project-card__title" data-en="PIT WALL — F1 Stats">PIT WALL — Estadísticas de F1</h3>
+            <p class="project-card__desc" data-en="Personal F1 statistics app (1980–2026 seasons): driver and constructor standings, race calendar and results, a cross-season comparator and an admin panel to enter each Grand Prix's results.">
+              App personal de estadísticas de Fórmula 1 (temporadas 1980–2026): posiciones de pilotos
+              y constructores, calendario y resultados por carrera, comparador entre temporadas y un
+              panel de administración para cargar los resultados de cada Gran Premio.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">JavaScript</li>
+              <li class="chip">Tailwind CSS</li>
+              <li class="chip">Chart.js</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">SQLite</li>
+            </ul>
+            <div class="project-card__footer">
+              <span class="project-card__date">2026</span>
+              <div class="project-card__links">
+                <a href="https://joakinkong.github.io/Pitwall-F1/" class="btn btn--demo btn--sm" target="_blank" rel="noopener" data-en="Demo">Demo</a>
+                <a href="https://github.com/joakinkong/Pitwall-F1" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2 — Pokédex (TP) -->
+        <article class="project-card">
+          <div class="project-card__media">
+            <img src="assets/proyecto-pokedex.png"
+                 alt="Captura de la Pokédex web"
+                 onerror="this.classList.add('project-card__img--placeholder'); this.removeAttribute('src');" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-row">
+              <span class="project-card__eyebrow" data-en="Frontend">Frontend</span>
+              <span class="project-card__status" data-en="Demo available">Demo disponible</span>
+            </div>
+            <h3 class="project-card__title" data-en="Pokédex">Pokédex</h3>
+            <p class="project-card__desc" data-en="Web Pokédex powered by the public PokéAPI: it shows the first 1025 Pokémon with their types, real-time search, a detail modal and a favorites system saved in localStorage. Built as a coursework assignment.">
+              Pokédex web que consume la PokéAPI pública: muestra los primeros 1025 Pokémon con sus
+              tipos, búsqueda en tiempo real, detalle en modal y un sistema de favoritos guardado en
+              localStorage. La hice como entregable de un TP.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">PokéAPI</li>
+            </ul>
+            <div class="project-card__footer">
+              <span class="project-card__date">2026</span>
+              <div class="project-card__links">
+                <a href="https://joakinkong.github.io/Pokemon-app/" class="btn btn--demo btn--sm" target="_blank" rel="noopener" data-en="Demo">Demo</a>
+                <a href="https://github.com/joakinkong/Pokemon-app" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3 — Sistema de Asistencia (privado) -->
+        <article class="project-card">
+          <div class="project-card__media">
+            <img src="assets/proyecto-asistencia.png"
+                 alt="Captura del sistema de asistencia de la E.T. N°35"
+                 onerror="this.classList.add('project-card__img--placeholder'); this.removeAttribute('src');" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-row">
+              <span class="project-card__eyebrow" data-en="Full Stack">Full Stack</span>
+              <span class="project-card__status" data-en="Private">Privado</span>
+            </div>
+            <h3 class="project-card__title" data-en="School Management System — E.T. N°35">Sistema de Gestión Escolar — E.T. N°35</h3>
+            <p class="project-card__desc" data-en="Web app to manage student check-in/out at E.T. N°35 via QR-code scanning, and to handle all the academic data: attendance, schedules, courses, subjects and student records. Each student has a personal QR and the system computes their attendance status based on the day's timetable.">
+              Aplicación web para gestionar el ingreso y egreso de alumnos de la E.T. N°35 mediante
+              escaneo de códigos QR, y administrar toda la información académica: asistencia, horarios,
+              cursos, materias y datos de los alumnos. Cada alumno tiene un QR personal y el sistema
+              calcula su estado de asistencia según el horario del día.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">Python</li>
+              <li class="chip">Django</li>
+              <li class="chip">SQLite</li>
+              <li class="chip">Bootstrap 5</li>
+              <li class="chip">qrcode</li>
+            </ul>
+            <div class="project-card__footer">
+              <span class="project-card__date">2026</span>
+              <!-- Repositorio privado: contiene información confidencial del colegio -->
+              <span class="project-card__private" data-en="Private repository">Repositorio privado</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto" class="section">
+      <h2 class="section__title" data-en="Contact">Contacto</h2>
+      <p class="section__text" data-en="Want to get in touch? You can write to me or find me on these channels.">
+        ¿Querés ponerte en contacto conmigo? Podés escribirme o encontrarme en estos canales.
+      </p>
+
+      <div class="contact-list">
+
+        <!-- MAIL (abre el cliente de correo con un mail a la dirección) -->
+        <a class="contact-item" href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web">
+          <span class="contact-item__icon" aria-hidden="true">✉️</span>
+          <span class="contact-item__info">
+            <span class="contact-item__label" data-en="Email">Email</span>
+            <span class="contact-item__value">joakinbarreira@gmail.com</span>
+          </span>
+        </a>
+
+        <!-- TELÉFONO -->
+        <a class="contact-item" href="tel:+5491134992779">
+          <span class="contact-item__icon" aria-hidden="true">📱</span>
+          <span class="contact-item__info">
+            <span class="contact-item__label" data-en="Phone">Teléfono</span>
+            <span class="contact-item__value">+54 9 11 3499-2779</span>
+          </span>
+        </a>
+
+        <!-- GITHUB -->
+        <a class="contact-item" href="https://github.com/joakinkong" target="_blank" rel="noopener">
+          <span class="contact-item__icon" aria-hidden="true">💻</span>
+          <span class="contact-item__info">
+            <span class="contact-item__label">GitHub</span>
+            <span class="contact-item__value">github.com/joakinkong</span>
+          </span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__container">
+
+      <!-- Columna 1: marca + mensaje + redes -->
+      <div class="footer__column footer__column--brand">
+        <h3 class="footer__heading">Joaquín Barreira</h3>
+        <p class="footer__text"
+           data-en="Made it this far? Awesome! I'm looking for my first professional experience and eager to contribute to a team. If you're interested in my profile, drop me a line.">
+          ¿Llegaste hasta acá? ¡Genial! Estoy en busca de mi primera experiencia profesional y con
+          muchas ganas de sumar a un equipo. Si te interesa mi perfil, escribime y charlamos.
+        </p>
+        <ul class="footer__socials">
+          <li>
+            <a href="https://github.com/joakinkong" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 496 512" fill="currentColor" aria-hidden="true">
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 9.8-41.3 25.8-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web" class="footer__social-link" aria-label="Email">
+              <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 2: enlaces rápidos a las secciones -->
+      <div class="footer__column">
+        <h3 class="footer__heading" data-en="Quick links">Enlaces rápidos</h3>
+        <ul class="footer__list">
+          <li><a href="#inicio" class="footer__link" data-en="Home">Inicio</a></li>
+          <li><a href="#sobre-mi" class="footer__link" data-en="About me">Sobre mí</a></li>
+          <li><a href="#habilidades" class="footer__link" data-en="Skills">Habilidades</a></li>
+          <li><a href="#trayectoria" class="footer__link" data-en="Background">Trayectoria</a></li>
+          <li><a href="#proyectos" class="footer__link" data-en="Projects">Proyectos</a></li>
+          <li><a href="#contacto" class="footer__link" data-en="Contact">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: datos de contacto -->
+      <div class="footer__column">
+        <h3 class="footer__heading" data-en="Contact">Contacto</h3>
+        <ul class="footer__list">
+          <li><a href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web" class="footer__link">joakinbarreira@gmail.com</a></li>
+          <li><a href="tel:+5491134992779" class="footer__link">+54 9 11 3499-2779</a></li>
+          <li><a href="https://github.com/joakinkong" class="footer__link" target="_blank" rel="noopener">github.com/joakinkong</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior -->
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Joaquín Barreira</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
