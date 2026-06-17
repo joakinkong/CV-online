@@ -2,6 +2,8 @@
 
 Currículum web personal hecho como **sitio estático** con HTML, CSS y JavaScript plano (sin frameworks ni librerías externas). Pensado para hostearse en **GitHub Pages**.
 
+🔗 **Sitio en vivo:** https://joakinkong.github.io/CV-online/
+
 ## Características
 
 - 📄 **Una sola página (single-page)**: te desplazás entre secciones con scroll, y la navbar lleva a cada sección (Inicio, Sobre mí, Habilidades, Trayectoria, Proyectos, Contacto).
