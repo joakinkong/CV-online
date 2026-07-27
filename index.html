@@ -323,6 +323,78 @@
           </div>
         </article>
 
+        <!-- PROYECTO 4 — Veredas Seguras (tótems de seguridad) -->
+        <article class="project-card">
+          <div class="project-card__media">
+            <img src="assets/proyecto-veredas.png"
+                 alt="Captura del panel de control de Veredas Seguras"
+                 onerror="this.classList.add('project-card__img--placeholder'); this.removeAttribute('src');" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-row">
+              <span class="project-card__eyebrow" data-en="Frontend">Frontend</span>
+              <span class="project-card__status" data-en="Demo available">Demo disponible</span>
+            </div>
+            <h3 class="project-card__title" data-en="Veredas Seguras — Safety totems">Veredas Seguras — Tótems de seguridad</h3>
+            <p class="project-card__desc" data-en="Control panel to manage street-side safety totems (emergency call devices) in Comuna 10, Buenos Aires. A school project for E.T. N°35 featuring an operator dashboard (live map, panic alerts, network stats) and a public totem screen with a full-screen emergency button. Runs entirely in the browser, no backend. The demo requires the password: veredas2026.">
+              Panel de control para gestionar tótems de seguridad (dispositivos de auxilio en la vía
+              pública) en la Comuna 10 de CABA. Proyecto escolar de la E.T. N°35 con un dashboard
+              operativo (mapa en tiempo real, alertas de pánico, estadísticas de red) y una pantalla
+              pública de tótem con botón de emergencia a pantalla completa. Corre 100% en el navegador,
+              sin backend. La demo pide la contraseña: veredas2026.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">React</li>
+              <li class="chip">TypeScript</li>
+              <li class="chip">Vite</li>
+              <li class="chip">Leaflet</li>
+            </ul>
+            <div class="project-card__footer">
+              <span class="project-card__date">2026</span>
+              <div class="project-card__links">
+                <a href="https://veredas-seguras.vercel.app/" class="btn btn--demo btn--sm" target="_blank" rel="noopener" data-en="Demo">Demo</a>
+                <a href="https://github.com/joakinkong/Veredas-Seguras" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 5 — App Armario (armario digital) -->
+        <article class="project-card">
+          <div class="project-card__media">
+            <img src="assets/proyecto-armario.png"
+                 alt="Captura de App Armario"
+                 onerror="this.classList.add('project-card__img--placeholder'); this.removeAttribute('src');" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-row">
+              <span class="project-card__eyebrow" data-en="Frontend">Frontend</span>
+              <span class="project-card__status" data-en="Demo available">Demo disponible</span>
+            </div>
+            <h3 class="project-card__title" data-en="App Armario — Digital wardrobe">App Armario — Armario digital</h3>
+            <p class="project-card__desc" data-en="Digital wardrobe to catalog your clothes with photos and build outfits on a virtual mannequin before getting dressed. Automatically classifies garments with AI (Claude), removes photo backgrounds, and offers a 2D/3D fitting room. Clothes are only stored in your browser (IndexedDB): no backend, nothing is uploaded to a server.">
+              Armario digital para catalogar tu ropa con fotos y armar looks sobre un maniquí virtual
+              antes de vestirte. Clasifica las prendas automáticamente con IA (Claude), recorta el fondo
+              de las fotos y ofrece un probador en 2D y 3D. Las prendas solo persisten en tu navegador
+              (IndexedDB): no hay backend ni se suben a ningún servidor.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">React</li>
+              <li class="chip">TypeScript</li>
+              <li class="chip">Vite</li>
+              <li class="chip">Three.js</li>
+              <li class="chip">Tailwind CSS</li>
+            </ul>
+            <div class="project-card__footer">
+              <span class="project-card__date">2026</span>
+              <div class="project-card__links">
+                <a href="https://app-armario.vercel.app/" class="btn btn--demo btn--sm" target="_blank" rel="noopener" data-en="Demo">Demo</a>
+                <a href="https://github.com/joakinkong/App-armario" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -335,8 +407,8 @@
 
       <div class="contact-list">
 
-        <!-- MAIL (abre el cliente de correo con un mail a la dirección) -->
-        <a class="contact-item" href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web">
+        <!-- MAIL (abre Gmail en una pestaña nueva con un mail a la dirección) -->
+        <a class="contact-item" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=joakinbarreira@gmail.com&amp;su=Contacto%20desde%20tu%20CV%20web" target="_blank" rel="noopener">
           <span class="contact-item__icon" aria-hidden="true">✉️</span>
           <span class="contact-item__info">
             <span class="contact-item__label" data-en="Email">Email</span>
@@ -388,9 +460,16 @@
             </a>
           </li>
           <li>
-            <a href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web" class="footer__social-link" aria-label="Email">
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=joakinbarreira@gmail.com&amp;su=Contacto%20desde%20tu%20CV%20web" class="footer__social-link" target="_blank" rel="noopener" aria-label="Email">
               <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
                 <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/joaquin.barre/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
               </svg>
             </a>
           </li>
@@ -414,7 +493,7 @@
       <div class="footer__column">
         <h3 class="footer__heading" data-en="Contact">Contacto</h3>
         <ul class="footer__list">
-          <li><a href="mailto:joakinbarreira@gmail.com?subject=Contacto%20desde%20tu%20CV%20web" class="footer__link">joakinbarreira@gmail.com</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=joakinbarreira@gmail.com&amp;su=Contacto%20desde%20tu%20CV%20web" class="footer__link" target="_blank" rel="noopener">joakinbarreira@gmail.com</a></li>
           <li><a href="tel:+5491134992779" class="footer__link">+54 9 11 3499-2779</a></li>
           <li><a href="https://github.com/joakinkong" class="footer__link" target="_blank" rel="noopener">github.com/joakinkong</a></li>
         </ul>
